@@ -1,10 +1,6 @@
 FROM ubuntu:22.04
 
-RUN apt-get update && apt-get install -y \
-    bash \
-    curl \
-    vim \
-    git \
-    && apt-get clean
+# Cập nhật và cài đặt python3
+RUN apt-get update && apt-get install -y python3 python3-pip
 
-CMD ["bash"]
+CMD ["python3", "--version"]
